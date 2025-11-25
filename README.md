@@ -64,4 +64,22 @@ psychic-calculator div 6 3
 # or run the module directly
 python -m psychic_calculator.cli add 1 2
 ```
+
+## Deploy to Azure App Service
+
+This repository includes a small FastAPI web app in `app/main.py` that exposes the calculator as HTTP endpoints.
+
+1. Create an Azure App Service (Linux) and a Resource Group (choose Python 3.12 runtime if available).
+2. In the Azure portal, open your Web App -> Get publish profile -> Download. Copy the contents.
+3. In your GitHub repository, go to Settings → Secrets → Actions and add two secrets:
+	- `AZURE_WEBAPP_NAME`: the App Service name
+	- `AZURE_WEBAPP_PUBLISH_PROFILE`: the contents of the publish profile XML file
+4. Push to `main`. The workflow `.github/workflows/azure-deploy.yml` will run tests and deploy automatically.
+
+Recommended startup command (if needed in App Service configuration):
+```
+gunicorn -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:{PORT:-8000}
+```
+
+Note: Azure App Service may restrict supported Python versions; if 3.12 isn't available, pick a supported runtime (e.g., 3.11) and update the workflow and package settings accordingly.
 # psychic-octo-enigma
