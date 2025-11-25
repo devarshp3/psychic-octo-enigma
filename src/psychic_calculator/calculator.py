@@ -6,8 +6,8 @@ Functions use simple, well-typed signatures and raise standard exceptions for
 error conditions (e.g., `ZeroDivisionError`). Keep implementations trivial
 so unit tests can be precise and fast.
 """
-from typing import Union
 import logging
+from typing import Union
 
 logger = logging.getLogger(__name__)
 

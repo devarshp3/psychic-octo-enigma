@@ -6,6 +6,7 @@ Expose calculator functions at package level for simple imports:
 from psychic_calculator import add, divide
 ```
 """
-from .calculator import add, subtract, multiply, divide
+
+from .calculator import add, divide, multiply, subtract
 
 __all__ = ["add", "subtract", "multiply", "divide"]

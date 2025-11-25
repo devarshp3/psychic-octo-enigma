@@ -1,6 +1,6 @@
 import pytest
 
-from psychic_calculator import add, subtract, multiply, divide
+from psychic_calculator import add, divide, multiply, subtract
 
 
 @pytest.mark.parametrize(

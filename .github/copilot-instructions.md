@@ -85,7 +85,7 @@ project-specific commands or policies to match human expectations.
 
 ---
 If you want, I can now scaffold a Python project with `src/` layout, `pyproject.toml`, `tests/`, dev tooling, and a GitHub Actions workflow—tell me which Python version and whether to use Poetry or pip + requirements.
- 
+
 **Strict Python conventions, coding standards & test patterns**
 
 These are the concrete, repository-level standards an AI agent should follow when creating or editing Python code here. Keep changes minimal and explicit; prefer fixing root causes over band-aid edits.
