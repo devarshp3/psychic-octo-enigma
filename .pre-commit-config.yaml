@@ -18,11 +18,9 @@ repos:
       - id: ruff
         args: ["--fix"]
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.9.0
-    hooks:
-      - id: mypy
-        args: ["--ignore-missing-imports", "src"]
+  # Note: mypy is executed in CI rather than as a pre-commit hook to avoid
+  # duplicate-module issues when running from repository root. Keep mypy in
+  # `requirements-dev.txt` and run `mypy src` in CI instead.
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
