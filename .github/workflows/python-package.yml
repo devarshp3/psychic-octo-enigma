@@ -25,14 +25,12 @@ jobs:
           # Install package in editable mode so tests can import from src/
           pip install -e .
 
-      - name: Run format & lint checks
+      - name: Run format & lint checks (pre-commit)
         run: |
-          black --version
-          black --check .
-          isort --version
-          isort --check-only .
-          ruff --version || true
-          ruff check .
+          # Use pre-commit to run the same hooks locally run by contributors.
+          # This ensures consistent versions and ordering of formatters/linters.
+          pre-commit --version || true
+          pre-commit run --all-files
 
       - name: Run mypy
         run: |
