@@ -5,9 +5,10 @@ Usage:
 
 This script exercises the public functions and prints results.
 """
+
 from __future__ import annotations
 
-from psychic_calculator import add, subtract, multiply, divide
+from psychic_calculator import add, divide, multiply, subtract
 
 
 def main() -> None:
