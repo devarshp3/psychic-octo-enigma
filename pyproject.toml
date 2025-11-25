@@ -8,5 +8,8 @@ version = "0.1.0"
 description = "A small example Python calculator package used for demos and tests."
 requires-python = ">=3.12"
 
+[project.scripts]
+psychic-calculator = "psychic_calculator.cli:main"
+
 [tool]
 # minimal tool section; formatting/linting configured in CI or with dev tools

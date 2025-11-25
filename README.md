@@ -49,4 +49,19 @@ If you prefer to run the package in editable mode instead of using `PYTHONPATH`,
 pip install -e .
 python -m pytest -q
 ```
+
+## CLI
+
+After installing the package (editable or normal) the project exposes a small CLI `psychic-calculator`:
+
+Examples:
+
+```bash
+# using the installed CLI (after `pip install -e .`)
+psychic-calculator add 1 2
+psychic-calculator div 6 3
+
+# or run the module directly
+python -m psychic_calculator.cli add 1 2
+```
 # psychic-octo-enigma
