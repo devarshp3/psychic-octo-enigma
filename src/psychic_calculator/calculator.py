@@ -1,11 +1,11 @@
-from __future__ import annotations
-
 """Small calculator utilities used in examples and tests.
 
 Functions use simple, well-typed signatures and raise standard exceptions for
 error conditions (e.g., `ZeroDivisionError`). Keep implementations trivial
 so unit tests can be precise and fast.
 """
+from __future__ import annotations
+
 import logging
 from typing import Union
 

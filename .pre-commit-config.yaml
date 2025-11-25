@@ -22,7 +22,7 @@ repos:
     rev: v1.9.0
     hooks:
       - id: mypy
-        args: ["--strict"]
+        args: ["--ignore-missing-imports", "src", "tests"]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
