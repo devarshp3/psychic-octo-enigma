@@ -2,18 +2,20 @@
 
 Provides a small command-line interface that performs basic arithmetic.
 """
+
 from __future__ import annotations
 
 import argparse
-import sys
 from typing import Sequence
 
-from .calculator import add, subtract, multiply, divide
+from .calculator import add, divide, multiply, subtract
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="psychic-calculator")
-    parser.add_argument("operation", choices=["add", "sub", "mul", "div"], help="operation")
+    parser.add_argument(
+        "operation", choices=["add", "sub", "mul", "div"], help="operation"
+    )
     parser.add_argument("a", type=float, help="first operand")
     parser.add_argument("b", type=float, help="second operand")
     return parser

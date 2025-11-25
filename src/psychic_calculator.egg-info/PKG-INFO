@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: psychic-calculator
+Version: 0.1.0
+Summary: A small example Python calculator package used for demos and tests.
+Requires-Python: >=3.12

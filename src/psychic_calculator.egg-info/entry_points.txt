@@ -1,0 +1,2 @@
+[console_scripts]
+psychic-calculator = psychic_calculator.cli:main
